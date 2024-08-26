@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn Anything, Anywhere</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav>
@@ -22,50 +21,88 @@
           Craft stories, learn from historical figures and speak in 100s of
           languages with mentors from across the globe.
         </h2>
+        <div class="header-buttons">
+          <button class="join-now-btn">Join Now</button>
+          <button class="watch-video-btn">Watch Video</button>
+        </div>
       </header>
-      <section>
-        <img
-          src="assets/header-cards.jpg"
-          alt="Cards Image 1"
-          class="header-img" />
-        <div>
-          <h2>The world is your playground</h2>
+      <img
+        src="assets/header-cards.jpg"
+        alt="Cards Image 1"
+        class="header-img"
+      />
+      <section class="main-section">
+        <div class="content-block">
+          <h2 class="gradient-text">The world is your playground</h2>
           <p>
-            Build a web of stories, lessons, characters, and more with
-            cutting-edge generative AI technology.
+            weave a web of lessons, mentors and more with cutting edge
+            generative AI technology.
           </p>
           <img
             src="assets/subheader-cards.jpg"
-            alt="Cards Image 2"
-            class="cards-img" />
+            alt="Subheader Cards"
+            class="subheader-img"
+          />
         </div>
+      </section>
+      <section class="main-section-learn">
+        <div class="content-block">
+          <h2>Learn Anything</h2>
+          <p>
+            Whether it's Mathematics or Life Skills, level up and track your
+            progress from novice to expert. Supercharge your knowledge with a
+            platform built for learners, by teachers.
+          </p>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+        <img
+          src="assets/revision - flash cards.jpg"
+          alt="Learn Anything"
+          class="learn-anything-img"
+        />
       </section>
       <section class="cards-section">
         <div class="card-container">
           <div class="card-header">
-            <h2>Share your ideas</h2>
-            <p>
-              Take part in educating the next generation and contribute your
-              story to the community.
-            </p>
+            <h2 class="gradient-text">Unlimited Creativity</h2>
+            <h3>Craft mentors that guide you</h3>
+            <p>Craft mentors that guide you through your learning journey.</p>
           </div>
           <img
             src="assets/share-card.png"
             alt="Cards Image 2"
-            class="cards-img" />
+            class="cards-img"
+          />
         </div>
         <div class="card-container">
           <img
             src="assets/share-card.png"
             alt="Cards Image 2"
-            class="cards-img" />
+            class="cards-img"
+          />
           <div class="card-header">
-            <h2>Share your ideas</h2>
+            <h2 class="gradient-text">Share your ideas</h2>
+            <h3>Take part in education</h3>
             <p>
               Take part in educating the next generation and contribute your
-              story to the community.
+              lessons to the community.
             </p>
           </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="gradient-text">Meet the greats</h2>
+            <h3>Converse with the world</h3>
+            <p>
+              Have conversations with one of the millions of the worlds
+              historical figures!
+            </p>
+          </div>
+          <img
+            src="assets/share-card.png"
+            alt="Cards Image 2"
+            class="cards-img"
+          />
         </div>
       </section>
     </div>
@@ -78,3 +115,186 @@
     <script src="scripts.js"></script>
   </body>
 </html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  li {
+    color: #404040;
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  nav .logo {
+    width: 100px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    color: #404040;
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .subheader {
+    text-align: center;
+    width: 60%;
+    font-size: 24px;
+  }
+
+  .subheader-img {
+    max-width: 50vw;
+  }
+
+  .cards-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cards-img {
+    width: 50%;
+  }
+
+  .header-img {
+    max-width: 50vw;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #4b0082 0%, #800080 100%);
+    color: white;
+  }
+
+  footer p,
+  footer a {
+    color: white;
+  }
+
+  .main-section-learn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #4b0082 0%, #800080 100%);
+    color: white;
+  }
+
+  .main-section-learn .content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .main-section-learn h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .main-section-learn p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .main-section-learn .signup-btn,
+  .join-now-btn,
+  .watch-video-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .main-section-learn .signup-btn {
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, #4b0082 0%, #800080 100%);
+  }
+
+  .join-now-btn,
+  .watch-video-btn {
+    background: linear-gradient(135deg, #4b0082 0%, #800080 100%);
+    color: white;
+  }
+
+  .main-section-learn .signup-btn:hover,
+  .join-now-btn:hover,
+  .watch-video-btn:hover {
+    opacity: 0.9;
+  }
+
+  .main-section-learn .learn-anything-img {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4b0082 0%, #800080 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+</style>
