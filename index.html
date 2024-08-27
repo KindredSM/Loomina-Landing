@@ -14,15 +14,14 @@
       <img src="assets/logo.svg" alt="Logo" class="logo" />
       <ul>
         <li>
-          <a href="#about">About <i class="fas fa-info-circle"></i></a>
-        </li>
-        <li>
-          <a href="#contact">Contact <i class="fas fa-envelope"></i></a>
-        </li>
-        <li>
-          <a href="https://discord.com" target="_blank"
-            >Discord <i class="fab fa-discord"></i
+          <a href="mailto:loominalearn@proton.me"
+            ><i class="fas fa-envelope fa-lg"></i
           ></a>
+        </li>
+        <li>
+          <a href="https://discord.gg/a3nAUR5w" target="_blank">
+            <i class="fab fa-discord fa-lg"></i>
+          </a>
         </li>
       </ul>
     </nav>
@@ -35,10 +34,10 @@
         </h2>
         <div class="header-buttons">
           <button class="join-now-btn">
-            Join Now <i class="fas fa-user-plus"></i>
+            Join Now <i class="fab fa-discord fa-lg"></i>
           </button>
-          <button class="watch-video-btn">
-            Watch Video <i class="fas fa-play-circle"></i>
+          <button class="watch-video-btn" id="watchVideoBtn">
+            Watch Demo <i class="fas fa-play-circle fa-lg"></i>
           </button>
         </div>
       </header>
@@ -49,8 +48,10 @@
       />
       <section class="main-section">
         <div class="content-block">
-          <h2 class="gradient-text">
-            The world is your playground <i class="fas fa-magic"></i>
+          <h2 class="text-flex">
+            The world is your
+            <p class="gradient-text">playground</p>
+            <i class="fas fa-magic gradient-text"></i>
           </h2>
           <p>
             weave a web of lessons, mentors and more with cutting edge
@@ -71,8 +72,8 @@
             progress from novice to expert. Supercharge your knowledge with a
             platform built for learners, by teachers.
           </p>
-          <button class="signup-btn">
-            Sign Up <i class="fas fa-arrow-right"></i>
+          <button class="discord-btn learn">
+            Join Discord <i class="fab fa-discord"></i>
           </button>
         </div>
         <img
@@ -83,72 +84,120 @@
       </section>
       <section class="cards-section">
         <div class="card-container">
-          <div class="card-header">
-            <h2 class="gradient-text">
-              Unlimited Creativity <i class="fas fa-paint-brush"></i>
-            </h2>
-            <h3>Craft mentors that guide you</h3>
-            <p>Craft mentors that guide you through your learning journey.</p>
-          </div>
-          <img
-            src="assets/share-card.png"
-            alt="Cards Image 2"
-            class="cards-img"
-          />
-        </div>
-        <div class="card-container">
-          <img
-            src="assets/share-card.png"
-            alt="Cards Image 2"
-            class="cards-img"
-          />
-          <div class="card-header">
-            <h2 class="gradient-text">
-              Share your ideas <i class="fas fa-lightbulb"></i>
-            </h2>
-            <h3>Take part in education</h3>
-            <p>
-              Take part in educating the next generation and contribute your
-              lessons to the community.
-            </p>
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="gradient-text">
+                Unlimited Creativity
+                <i class="fas fa-paint-brush gradient-text"></i>
+              </h2>
+              <h3>Craft mentors that guide you</h3>
+              <p>Craft mentors that guide you through your learning journey.</p>
+            </div>
+            <img
+              src="assets/ancient-teacher-greek.jpg"
+              alt="Cards Image 2"
+              class="cards-img"
+            />
           </div>
         </div>
         <div class="card-container">
-          <div class="card-header">
-            <h2 class="gradient-text">
-              Meet the greats <i class="fas fa-users"></i>
-            </h2>
-            <h3>Converse with the world</h3>
-            <p>
-              Have conversations with one of the millions of the worlds
-              historical figures!
-            </p>
+          <div class="card-content">
+            <img
+              src="assets/share-card.png"
+              alt="Cards Image 2"
+              class="cards-img"
+            />
+            <div class="card-header">
+              <h2 class="gradient-text">
+                Share your ideas <i class="fas fa-lightbulb gradient-text"></i>
+              </h2>
+              <h3>Take part in education</h3>
+              <p>
+                Take part in educating the next generation and contribute your
+                lessons to the community.
+              </p>
+            </div>
           </div>
-          <img
-            src="assets/share-card.png"
-            alt="Cards Image 2"
-            class="cards-img"
-          />
+        </div>
+        <div class="card-container">
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="gradient-text">
+                Meet the greats <i class="fas fa-users gradient-text"></i>
+              </h2>
+              <h3>Converse with the world</h3>
+              <p>
+                Have conversations with one of the millions of the worlds
+                historical figures!
+              </p>
+            </div>
+            <img
+              src="assets/teacher-chat.jpg"
+              alt="Cards Image 2"
+              class="cards-img"
+            />
+          </div>
         </div>
       </section>
     </div>
+    <div id="videoPopup" class="video-popup">
+      <div class="video-popup-content">
+        <span class="close-popup">&times;</span>
+        <video width="100%" controls>
+          <source src="media/Loomina-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
     <footer>
-      <p>
-        Contact us:
-        <a href="mailto:info@example.com"
-          >info@example.com <i class="fas fa-envelope"></i
-        ></a>
-      </p>
-      <p>
-        Join our
-        <a href="https://discord.com" target="_blank"
-          >Discord <i class="fab fa-discord"></i
-        ></a>
-      </p>
+      <div class="footer-content">
+        <p>
+          Contact us:
+          <a href="mailto:loominalearn@proton.me"
+            >loominalearn@proton.me <i class="fas fa-envelope"></i
+          ></a>
+        </p>
+        <p>
+          Join our
+          <a href="https://discord.gg/a3nAUR5w" target="_blank"
+            >Discord <i class="fab fa-discord"></i
+          ></a>
+        </p>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Loomina. All rights reserved.</p>
+      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const watchVideoBtn = document.getElementById("watchVideoBtn");
+        const videoPopup = document.getElementById("videoPopup");
+        const closePopup = document.querySelector(".close-popup");
+        const video = document.querySelector("#videoPopup video");
+
+        watchVideoBtn.addEventListener("click", function () {
+          videoPopup.style.display = "block";
+          video.play();
+        });
+
+        closePopup.addEventListener("click", function () {
+          videoPopup.style.display = "none";
+          video.pause();
+          video.currentTime = 0;
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target == videoPopup) {
+            videoPopup.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
 
@@ -166,8 +215,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 16px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
   }
 
   h1,
@@ -183,6 +237,15 @@
   h2 {
     font-weight: 600;
   }
+
+  .text-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .center-container {
     display: flex;
     flex-direction: column;
@@ -198,11 +261,11 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin-right: 2rem;
   }
 
   nav ul li a {
-    color: #404040;
-    text-decoration: none;
+    font-size: 1.2rem;
   }
 
   header {
@@ -213,6 +276,7 @@
     text-align: center;
     padding: 2rem;
     font-size: 32px;
+    margin-top: 5rem;
     margin-bottom: 2rem;
   }
 
@@ -237,16 +301,27 @@
 
   .cards-section {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
     padding: 2rem;
     gap: 2rem;
   }
 
   .card-container {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .card-content {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-header {
+    flex: 1;
+    text-align: left;
   }
 
   .card-header h2 {
@@ -258,7 +333,9 @@
   }
 
   .cards-img {
-    width: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 
   .header-img {
@@ -267,7 +344,7 @@
 
   footer {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     background: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
     color: white;
   }
@@ -275,6 +352,18 @@
   footer p,
   footer a {
     color: white;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
   }
 
   .main-section-learn {
@@ -307,6 +396,7 @@
   }
 
   .main-section-learn .signup-btn,
+  .main-section-learn .discord-btn,
   .join-now-btn,
   .watch-video-btn {
     padding: 0.8rem 2rem;
@@ -314,27 +404,42 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 600;
   }
 
-  .main-section-learn .signup-btn {
+  .discord-btn.learn {
+    background: #fff;
+    color: #4b0082;
+  }
+  .main-section-learn .signup-btn,
+  .main-section-learn .discord-btn {
     background: white;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
+    color: #4b0082;
+    margin-bottom: 1rem;
   }
 
-  .join-now-btn,
-  .watch-video-btn {
+  .join-now-btn {
     background: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
     color: white;
   }
 
+  .watch-video-btn {
+    background: transparent;
+    border: 3px solid #4b0082;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
+    padding: calc(0.8rem - 3px) calc(2rem - 3px);
+  }
+
   .main-section-learn .signup-btn:hover,
+  .main-section-learn .discord-btn:hover,
   .join-now-btn:hover,
   .watch-video-btn:hover {
-    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .main-section-learn .learn-anything-img {
@@ -363,5 +468,44 @@
   .fas,
   .fab {
     margin-left: 0.5rem;
+  }
+
+  .video-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .video-popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .close-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-popup:hover,
+  .close-popup:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
 </style>
