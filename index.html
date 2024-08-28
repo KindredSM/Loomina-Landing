@@ -34,7 +34,9 @@
         </h2>
         <div class="header-buttons">
           <button class="join-now-btn">
-            Join Now <i class="fab fa-discord fa-lg"></i>
+            <a href="https://discord.gg/a3nAUR5w" target="_blank"
+              >Join Now <i class="fab fa-discord fa-lg"></i
+            ></a>
           </button>
           <button class="watch-video-btn" id="watchVideoBtn">
             Watch Demo <i class="fas fa-play-circle fa-lg"></i>
@@ -50,10 +52,12 @@
         <div class="content-block">
           <h2 class="text-flex">
             The world is your
-            <p class="gradient-text">playground</p>
-            <i class="fas fa-magic gradient-text"></i>
+            <span class="text-flex-inline">
+              <p class="gradient-text">playground</p>
+              <i class="fas fa-magic gradient-text"></i>
+            </span>
           </h2>
-          <p>
+          <p class="weave-text">
             weave a web of lessons, mentors and more with cutting edge
             generative AI technology.
           </p>
@@ -66,14 +70,18 @@
       </section>
       <section class="main-section-learn">
         <div class="content-block">
-          <h2>Learn Anything <i class="fas fa-graduation-cap"></i></h2>
+          <h2 class="learn-anything-text-header">
+            Learn Anything <i class="fas fa-graduation-cap"></i>
+          </h2>
           <p>
             Whether it's Mathematics or Life Skills, level up and track your
             progress from novice to expert. Supercharge your knowledge with a
-            platform built for learners, by teachers.
+            platform built for learners, advised by teachers.
           </p>
           <button class="discord-btn learn">
-            Join Discord <i class="fab fa-discord"></i>
+            <a href="https://discord.gg/a3nAUR5w" target="_blank"
+              >Join Discord <i class="fab fa-discord"></i
+            ></a>
           </button>
         </div>
         <img
@@ -171,33 +179,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="scripts.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const watchVideoBtn = document.getElementById("watchVideoBtn");
-        const videoPopup = document.getElementById("videoPopup");
-        const closePopup = document.querySelector(".close-popup");
-        const video = document.querySelector("#videoPopup video");
-
-        watchVideoBtn.addEventListener("click", function () {
-          videoPopup.style.display = "block";
-          video.play();
-        });
-
-        closePopup.addEventListener("click", function () {
-          videoPopup.style.display = "none";
-          video.pause();
-          video.currentTime = 0;
-        });
-
-        window.addEventListener("click", function (event) {
-          if (event.target == videoPopup) {
-            videoPopup.style.display = "none";
-            video.pause();
-            video.currentTime = 0;
-          }
-        });
-      });
-    </script>
   </body>
 </html>
 
@@ -246,6 +227,12 @@
     gap: 0.5rem;
   }
 
+  .text-flex-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   .center-container {
     display: flex;
     flex-direction: column;
@@ -257,6 +244,9 @@
     width: 100px;
   }
 
+  .weave-text {
+    margin-bottom: 2rem;
+  }
   nav ul {
     list-style: none;
     display: flex;
@@ -507,5 +497,232 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .join-now-btn a,
+  .discord-btn a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    header {
+      font-size: 24px;
+    }
+    .subheader {
+      width: 100%;
+      font-size: 18px;
+    }
+    .header-buttons {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .main-section-learn {
+      max-width: 100%;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    .main-section-learn .content-block {
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .content-block h2 {
+      text-align: center;
+      font-size: 24px;
+    }
+    .main-section-learn .learn-anything-img {
+      max-width: 70%;
+    }
+    .cards-section {
+      padding: 1rem;
+    }
+
+    .card-container {
+      width: 100%;
+    }
+    .card-content {
+      flex-direction: column;
+    }
+    .content-block h2 {
+      text-align: left;
+    }
+
+    .card-header {
+      text-align: center;
+    }
+    .cards-img {
+      height: auto;
+    }
+    .footer-content {
+      flex-direction: column;
+    }
+    .text-flex {
+      flex-direction: column;
+    }
+    .text-flex-inline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      font-size: 20px;
+    }
+    .subheader {
+      font-size: 16px;
+    }
+    .header-buttons {
+      flex-direction: column;
+    }
+    .main-section-learn {
+      flex-direction: column;
+    }
+    .main-section-learn .content-block {
+      align-items: center;
+      justify-content: center;
+    }
+    .content-block h2 {
+      font-size: 20px;
+    }
+    .main-section-learn .learn-anything-img {
+      max-width: 80%;
+    }
+    .cards-section {
+      padding: 1rem;
+    }
+    .learn-anything-text-header {
+      text-align: left;
+    }
+
+    .card-container {
+      width: 100%;
+    }
+    .card-content {
+      flex-direction: column;
+    }
+
+    .card-header {
+      text-align: center;
+      order: 1;
+    }
+
+    .cards-img {
+      width: 100%;
+      height: auto;
+      order: 2;
+    }
+
+    // Remove the alternating layout for the middle card
+    .card-container:nth-child(2) .card-content {
+      flex-direction: column;
+    }
+
+    .card-container:nth-child(2) .card-header {
+      order: 1;
+    }
+
+    .card-container:nth-child(2) .cards-img {
+      order: 2;
+    }
+
+    .footer-content {
+      flex-direction: column;
+    }
+    .text-flex {
+      flex-direction: column;
+    }
+    .text-flex-inline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav ul {
+      margin-top: 1rem;
+    }
+    header {
+      font-size: 18px;
+    }
+    .subheader {
+      font-size: 14px;
+    }
+    .header-buttons {
+      flex-direction: column;
+    }
+    .main-section-learn {
+      flex-direction: column;
+    }
+    .main-section-learn .content-block {
+      align-items: center;
+      justify-content: center;
+    }
+    .content-block h2 {
+      font-size: 18px;
+    }
+    .main-section-learn .learn-anything-img {
+      max-width: 90%;
+    }
+    .cards-section {
+      padding: 1rem;
+    }
+
+    .card-container {
+      width: 100%;
+    }
+    .card-content {
+      flex-direction: column;
+    }
+
+    .card-header {
+      text-align: center;
+      order: 1;
+    }
+
+    .cards-img {
+      width: 100%;
+      height: auto;
+      order: 2;
+    }
+
+    // Remove the alternating layout for the middle card
+    .card-container:nth-child(2) .card-content {
+      flex-direction: column;
+    }
+
+    .card-container:nth-child(2) .card-header {
+      order: 1;
+    }
+
+    .card-container:nth-child(2) .cards-img {
+      order: 2;
+    }
+
+    .footer-content {
+      flex-direction: column;
+    }
+    .text-flex {
+      flex-direction: column;
+    }
+    .text-flex-inline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-popup-content {
+      width: 90%;
+    }
   }
 </style>
