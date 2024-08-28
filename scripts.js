@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Hide content initially
+  gsap.set(".center-container", { opacity: 0 });
+
+  // Fade in content
+  gsap.to(".center-container", {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+  });
+
   gsap.registerPlugin(ScrollTrigger);
 
   // Animate header elements
