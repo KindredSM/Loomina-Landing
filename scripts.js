@@ -1,23 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Header animations
   gsap.from("header h1", {
-    duration: 1.2,
-    y: -70,
+    duration: 0.5,
+    y: 20,
     opacity: 0,
     ease: "power3.out",
-    stagger: 0.2,
     rotationX: 90,
   });
 
-  gsap.from("header p", {
-    duration: 0.8,
-    scale: 0.5,
+  gsap.from(".subheader", {
+    duration: 0.5,
+    y: 20,
     opacity: 0,
-    delay: 0.3,
-    ease: "back.out(1.7)",
+    ease: "power3.out",
+    delay: 0.2,
+    rotationX: 90,
   });
 
+  gsap.from(".header-buttons", {
+    duration: 0.5,
+    y: 20,
+    opacity: 0,
+    ease: "power3.out",
+    delay: 0.3,
+  });
+
+  // Existing animations
   gsap.from(".main-section, .main-section-learn", {
     scrollTrigger: {
       trigger: ".main-section",
