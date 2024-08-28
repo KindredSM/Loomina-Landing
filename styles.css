@@ -243,6 +243,7 @@ footer a {
 .main-section-learn .discord-btn,
 .join-now-btn,
 .watch-video-btn {
+  display: inline-block;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   border: none;
@@ -250,6 +251,8 @@ footer a {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
+  text-decoration: none;
+  text-align: center;
 }
 
 .discord-btn.learn {

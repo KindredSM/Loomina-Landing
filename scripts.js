@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headerTimeline
     .from("header h1", {
-      duration: 0.8,
+      duration: 0.5,
       y: 30,
       opacity: 0,
     })
     .from(
       ".subheader",
       {
-        duration: 0.8,
+        duration: 0.5,
         y: 20,
         opacity: 0,
       },
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .from(
       ".header-buttons",
       {
-        duration: 0.8,
+        duration: 0.5,
         y: 20,
         opacity: 0,
       },
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         opacity: 0,
         y: 30,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power2.out",
       });
     });
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       opacity: 0,
       y: 30,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power2.out",
       delay: index * 0.2,
     });
