@@ -2,62 +2,69 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   // Header animations
-  gsap.from("header h1", {
-    duration: 0.5,
-    y: 20,
-    opacity: 0,
-    ease: "power3.out",
-    rotationX: 90,
-  });
+  const headerTimeline = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-  gsap.from(".subheader", {
-    duration: 0.5,
-    y: 20,
-    opacity: 0,
-    ease: "power3.out",
-    delay: 0.2,
-    rotationX: 90,
-  });
+  headerTimeline
+    .from("header h1", {
+      duration: 0.8,
+      y: 30,
+      opacity: 0,
+    })
+    .from(
+      ".subheader",
+      {
+        duration: 0.8,
+        y: 20,
+        opacity: 0,
+      },
+      "-=0.4"
+    )
+    .from(
+      ".header-buttons",
+      {
+        duration: 0.8,
+        y: 20,
+        opacity: 0,
+      },
+      "-=0.4"
+    );
 
-  gsap.from(".header-buttons", {
-    duration: 0.5,
-    y: 20,
-    opacity: 0,
-    ease: "power3.out",
-    delay: 0.3,
-  });
+  // Scroll-triggered animations
+  gsap.utils
+    .toArray(".main-section, .main-section-learn")
+    .forEach((section) => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+    });
 
-  // Existing animations
-  gsap.from(".main-section, .main-section-learn", {
-    scrollTrigger: {
-      trigger: ".main-section",
-      start: "top 80%",
-      end: "bottom 20%",
-      toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "power2.out",
-  });
-
-  gsap.from(".card-container", {
-    scrollTrigger: {
-      trigger: ".cards-section",
-      start: "top 70%",
-      end: "bottom 20%",
-      toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    scale: 0.8,
-    rotation: 15,
-    duration: 0.7,
-    stagger: 0.15,
-    ease: "back.out(1.5)",
+  gsap.utils.toArray(".card-container").forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: "power2.out",
+      delay: index * 0.2,
+    });
   });
 });
 
+// Video popup functionality (unchanged)
 document.addEventListener("DOMContentLoaded", function () {
   const watchVideoBtn = document.getElementById("watchVideoBtn");
   const videoPopup = document.getElementById("videoPopup");
