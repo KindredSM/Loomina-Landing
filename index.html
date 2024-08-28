@@ -8,6 +8,7 @@
       content="With a few minutes a day, everyone can learn a new skill with Loomina. Create your own mentor, pick a topic and enjoy your learning journey!"
     />
     <title>Loomina</title>
+    <link rel="icon" type="image/jpeg" href="assets/loomina logo.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -82,7 +83,7 @@
             progress from novice to expert. Supercharge your knowledge with a
             platform built for learners, advised by teachers.
           </p>
-          <button class="discord-btn learn">
+          <button class="discord-btn learn" style="margin-bottom: 2rem; align-self: center;">
             <a href="https://discord.gg/a3nAUR5w" target="_blank"
               >Join Discord <i class="fab fa-discord"></i
             ></a>
@@ -164,15 +165,15 @@
     <footer>
       <div class="footer-content">
         <p>
-          Contact us:
+          Reach out at
           <a href="mailto:loominalearn@proton.me"
-            >loominalearn@proton.me <i class="fas fa-envelope"></i
+            >loominalearn@proton.me </i
           ></a>
         </p>
         <p>
           Join our
           <a href="https://discord.gg/a3nAUR5w" target="_blank"
-            >Discord <i class="fab fa-discord"></i
+            >Discord </i
           ></a>
         </p>
       </div>
@@ -265,6 +266,11 @@
 
   nav ul li a {
     font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #800080;
   }
 
   header {
@@ -361,6 +367,16 @@
     margin-bottom: 1rem;
   }
 
+  .footer-content a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-content a:hover {
+    opacity: 0.8;
+  }
+
   .footer-copyright {
     font-size: 0.9rem;
     opacity: 0.8;
@@ -370,9 +386,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
     background: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
     color: white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 16px;
   }
 
   .main-section-learn .content-block {
@@ -533,9 +553,10 @@
       gap: 1rem;
     }
     .main-section-learn {
-      max-width: 100%;
       flex-direction: column;
       margin-bottom: 2rem;
+      border-radius: 0;
+      width: 100%;
     }
     .main-section-learn .content-block {
       max-width: 100%;
@@ -581,6 +602,9 @@
       align-items: center;
       justify-content: center;
     }
+    .header-img {
+      max-width: 80vw;
+    }
   }
 
   @media (max-width: 768px) {
@@ -602,7 +626,8 @@
     }
     .main-section-learn .content-block {
       align-items: center;
-      justify-content: center;
+      text-align: center;
+      max-width: 100%;
     }
     .content-block h2 {
       font-size: 20px;
@@ -614,7 +639,8 @@
       padding: 1rem;
     }
     .learn-anything-text-header {
-      text-align: left;
+      text-align: center;
+      align-self: center;
     }
 
     .card-container {
@@ -630,7 +656,6 @@
     }
 
     .cards-img {
-      width: 100%;
       height: auto;
       order: 2;
     }
@@ -659,6 +684,9 @@
       align-items: center;
       justify-content: center;
     }
+    .header-img {
+      max-width: 80vw;
+    }
   }
 
   @media (max-width: 480px) {
@@ -679,7 +707,7 @@
     }
     .main-section-learn .content-block {
       align-items: center;
-      justify-content: center;
+      text-align: center;
     }
     .content-block h2 {
       font-size: 18px;
@@ -704,7 +732,6 @@
     }
 
     .cards-img {
-      width: 100%;
       height: auto;
       order: 2;
     }
@@ -735,6 +762,9 @@
     }
     .video-popup-content {
       width: 90%;
+    }
+    .header-img {
+      max-width: 80vw;
     }
   }
 </style>
