@@ -32,7 +32,7 @@
     </nav>
     <div class="center-container">
       <header>
-        <h1>Revolutionize Your Learning with <span class="gradient-text">AI</span></h1>
+        <h1 class="header-text">Revolutionize Your Learning with <span class="gradient-text">AI</span></h1>
         <h2 class="subheader">
           Create your personal AI mentor, master any skill, and unlock your full potential.
         </h2>
@@ -79,7 +79,7 @@
           <p>
             From coding to cooking, history to quantum physics - our AI mentors guide you through any subject. Track your progress, overcome challenges, and achieve mastery faster than ever before.
           </p>
-          <button class="discord-btn learn" style="margin-bottom: 2rem; align-self: center;">
+          <button class="discord-btn learn" style="margin-bottom: 2rem; align-self: left;">
             <a href="https://discord.gg/a3nAUR5w" target="_blank"
               >Join Our Learning Community <i class="fab fa-discord"></i
             ></a>
@@ -304,6 +304,10 @@
     margin-top: 1.5rem;
   }
 
+  .header-text {
+    max-width: 80vw;
+  }
+
   .subheader-img {
     max-width: 50vw;
   }
@@ -434,6 +438,7 @@
   .discord-btn.learn {
     background: #fff;
     color: #4b0082;
+
   }
   .main-section-learn .signup-btn,
   .main-section-learn .discord-btn {
@@ -687,7 +692,9 @@
       height: auto;
       order: 2;
     }
-
+ .cta-section h2 {
+  font-size: 24px;
+ }
     .card-container:nth-child(2) .card-content {
       flex-direction: column;
     }
