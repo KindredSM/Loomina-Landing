@@ -621,9 +621,11 @@ footer a {
   }
 }
 
-/* ... all other styles ... */
-
 html {
   visibility: visible;
   opacity: 1;
+}
+
+html {
+  display: block !important;
 }

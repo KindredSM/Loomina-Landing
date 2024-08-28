@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Hide content initially
-
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate header elements
   gsap.from("header h1", {
     duration: 1.2,
     y: -70,
@@ -21,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "back.out(1.7)",
   });
 
-  // Animate main sections
   gsap.from(".main-section, .main-section-learn", {
     scrollTrigger: {
       trigger: ".main-section",
@@ -36,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power2.out",
   });
 
-  // Animate cards with a more dynamic effect
   gsap.from(".card-container", {
     scrollTrigger: {
       trigger: ".cards-section",
