@@ -30,22 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
   // Scroll-triggered animations
-  gsap.utils
-    .toArray(".main-section, .main-section-learn")
-    .forEach((section) => {
-      gsap.from(section, {
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.5,
-        ease: "power2.out",
-      });
+  gsap.utils.toArray(".main-section").forEach((section) => {
+    gsap.from(section, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.5,
+      ease: "power2.out",
     });
+  });
 
   gsap.utils.toArray(".card-container").forEach((card, index) => {
     gsap.from(card, {

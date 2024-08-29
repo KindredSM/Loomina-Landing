@@ -134,12 +134,13 @@ header h1 {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  gap: 2rem;
+  margin-top: 2rem;
+  gap: 4rem;
+  width: 90vw;
 }
 
 .card-container {
   width: 100%;
-  max-width: 800px;
 }
 
 .card-content {
@@ -147,6 +148,10 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+}
+
+.card-content p {
+  max-width: 80%;
 }
 
 .card-header {
@@ -214,7 +219,7 @@ footer a {
   box-sizing: border-box;
   background: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
   color: white;
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
   border-radius: 16px;
 }
@@ -397,6 +402,21 @@ footer a {
   header {
     font-size: 24px;
   }
+
+  .card-container:nth-child(2) .card-content {
+    flex-direction: column;
+  }
+
+  .card-container:nth-child(2) .card-header {
+    order: 1;
+  }
+
+  .card-container:nth-child(2) .cards-img {
+    order: 2;
+  }
+  .card-container p {
+    max-width: 100%;
+  }
   .subheader {
     width: 100%;
     font-size: 18px;
@@ -516,17 +536,6 @@ footer a {
   }
   .cta-section h2 {
     font-size: 24px;
-  }
-  .card-container:nth-child(2) .card-content {
-    flex-direction: column;
-  }
-
-  .card-container:nth-child(2) .card-header {
-    order: 1;
-  }
-
-  .card-container:nth-child(2) .cards-img {
-    order: 2;
   }
 
   .footer-content {
