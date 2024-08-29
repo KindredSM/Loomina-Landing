@@ -295,6 +295,10 @@ footer a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.learn-anything-img {
+  border-radius: 32px;
+}
+
 .gradient-text {
   background: linear-gradient(to bottom, #4b0082 0%, #800080 100%);
   -webkit-background-clip: text;
