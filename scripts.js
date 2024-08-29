@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 30,
       duration: 0.5,
       ease: "power2.out",
-      delay: index * 0.2,
+      delay: index * 0.1,
     });
   });
 });
