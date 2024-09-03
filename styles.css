@@ -85,7 +85,7 @@ nav ul {
 }
 
 nav ul li a {
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -152,7 +152,7 @@ header h1 {
 
 .card-content p {
   max-width: 80%;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .card-header {
@@ -395,6 +395,9 @@ footer a {
   margin-bottom: 32px;
 }
 
+.mobile-text {
+  display: none;
+}
 .cta-section .join-now-btn {
   font-size: 18px;
   padding: 1rem 2.5rem;
@@ -568,6 +571,13 @@ footer a {
   .main-section-learn .content-block {
     align-items: center;
     text-align: center;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+  .mobile-text {
+    display: inline;
   }
 
   .main-section-learn .learn-anything-img {
