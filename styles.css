@@ -628,15 +628,16 @@ footer a {
   .header-img {
     max-width: 80vw;
   }
-}
-
-@media (max-width: 480px) {
-
   .header-content, .header-video {
     width: 90%;
     padding-right: 0;
 
   }
+}
+
+@media (max-width: 480px) {
+
+
 
   nav ul {
     margin-top: 1rem;
