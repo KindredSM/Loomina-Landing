@@ -67,7 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const watchVideoBtn = document.querySelector(".watch-video-btn");
 
   if (headerVideo && videoOverlay) {
-    const playVideo = () => {
+    const loadAndPlayVideo = () => {
+      if (!headerVideo.src) {
+        headerVideo.src = headerVideo.dataset.src;
+      }
       headerVideo.play();
       videoOverlay.style.opacity = '0';
     };
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleVideo = () => {
       if (headerVideo.paused) {
-        playVideo();
+        loadAndPlayVideo();
       } else {
         pauseVideo();
       }
@@ -95,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (videoOverlay) {
       videoOverlay.addEventListener('click', (e) => {
         e.preventDefault();
-        playVideo();
+        loadAndPlayVideo();
       });
     }
 
@@ -103,6 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     headerVideo.addEventListener('ended', () => {
       videoOverlay.style.opacity = '1';
+    });
+
+    // Remove poster after video starts playing
+    headerVideo.addEventListener('play', () => {
+      headerVideo.removeAttribute('poster');
     });
   }
 });
