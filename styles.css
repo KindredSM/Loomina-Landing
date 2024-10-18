@@ -108,7 +108,7 @@ header {
 
 .header-video {
   flex: 1;
-  width: 50vw;
+  width: 60vw;
   position: relative;
   cursor: pointer;
   margin: 25px 0px;
