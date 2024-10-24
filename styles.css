@@ -23,12 +23,24 @@ nav {
   align-items: center;
   padding: 8px;
   padding-left: 16px;
-  height: 40px;
+  height: 60px;
   font-size: 18px;
   position: fixed;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  width: 96%;
+  border-radius: 16px;
+  box-shadow: none;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   z-index: 10;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  width: 95%;
 }
 
 h1,
@@ -87,12 +99,30 @@ nav ul {
 
 nav ul li a {
   font-size: 20px;
-  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #800080;
+nav ul li i {
+  padding: 10px;
+  border-radius: 16px;
+  transition: all 0.2s ease;
 }
+
+nav ul li {
+  transition: all 0.2s ease;
+ 
+
+}
+
+nav ul li:hover i {
+  background-color: #d1cece;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover {
+  transform: scale(1.05);
+}
+
+
 
 header {
   display: flex;
@@ -131,7 +161,7 @@ header {
   align-items: center;
   background-color: rgba(128, 0, 128, 0.3);
   border-radius: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
   box-shadow: 0px 16px 50px rgba(128, 0, 128, 0.3);
 }
 
@@ -161,7 +191,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
 }
 
@@ -171,7 +201,7 @@ header {
 }
 
 video {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   border-radius: 16px;
 }
 
@@ -278,7 +308,7 @@ footer a {
 .footer-content a {
   text-decoration: none;
   font-weight: bold;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .footer-content a:hover {
@@ -335,7 +365,7 @@ footer a {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
@@ -567,6 +597,25 @@ footer a {
 }
 
 @media (max-width: 768px) {
+  nav.scrolled {
+   width: 85%;
+  }
+  nav ul {
+    margin-left: 0;
+    padding-left: 0;
+  
+  }
+  nav ul {
+    margin-right: 16px;
+  }
+
+  nav ul li i {
+    padding: 0px;
+  }
+  nav ul li i:hover {
+    background: none;
+  }
+  
   .subheader {
     font-size: 18px;
   }
@@ -835,3 +884,4 @@ html {
   color: #fff;
   text-decoration: none;
 }
+
