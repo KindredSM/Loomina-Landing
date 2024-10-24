@@ -71,9 +71,9 @@ nav .logo {
 }
 
 .weave-text {
-  padding-bottom: 32px;
+  padding-bottom: 4rem;
   font-size: 20px;
-  width: 50%;
+  width: 60%;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 auto;
@@ -200,7 +200,7 @@ header h1 {
 }
 
 .subheader-img {
-  max-width: 50vw;
+  max-width: 70vw;
 }
 
 .cards-section {
@@ -209,7 +209,7 @@ header h1 {
   align-items: center;
   padding: 32px;
   margin-top: 32px;
-  gap: 64px;
+  gap: 6rem;
   width: 90vw;
 }
 
@@ -243,9 +243,9 @@ header h1 {
 }
 
 .cards-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  max-width: 300px;
+ 
+
 }
 
 .header-img {
@@ -569,6 +569,9 @@ footer a {
   .subheader {
     font-size: 18px;
   }
+  .subheader-img {
+    max-width: 80vw;
+  }
   .weave-text {
     font-size: 18px;
     width: 80%;
@@ -578,6 +581,10 @@ footer a {
   }
   .main-section-learn {
     flex-direction: column;
+    margin: 4rem 0rem;
+  }
+  .discord-btn.learn {
+    margin-bottom: 3rem;
   }
   .main-section-learn .content-block {
     align-items: center;
@@ -587,13 +594,16 @@ footer a {
 
   .main-section-learn .learn-anything-img {
     max-width: 80%;
+    margin-bottom: 3rem;
   }
   .cards-section {
     padding: 1rem;
+    gap: 6rem;
   }
   .learn-anything-text-header {
     text-align: center;
     align-self: center;
+    margin-top: 2rem;
   }
 
   .card-container {
@@ -608,6 +618,9 @@ footer a {
     order: 1;
   }
 
+  .card-content {
+    gap: 4rem;
+  }
   .cards-img {
     height: auto;
     order: 2;
