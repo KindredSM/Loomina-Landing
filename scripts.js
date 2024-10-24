@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded and parsed");
   gsap.registerPlugin(ScrollTrigger);
 
-  // Header animations
+
   const headerTimeline = gsap.timeline({ defaults: { ease: "power2.out" } });
 
   headerTimeline
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.4"
     );
 
-  // Scroll-triggered animations
+
   gsap.utils.toArray(".main-section").forEach((section) => {
     gsap.from(section, {
       scrollTrigger: {
@@ -65,52 +66,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerVideo = document.querySelector('.header-video video');
   const videoOverlay = document.querySelector('.video-overlay');
   const watchVideoBtn = document.querySelector(".watch-video-btn");
+  const videoPopup = document.getElementById('videoPopup');
+  const popupVideo = videoPopup.querySelector('.video-popup-video');
 
-  if (headerVideo && videoOverlay) {
-    const loadAndPlayVideo = () => {
-      if (!headerVideo.src) {
-        headerVideo.src = headerVideo.dataset.src;
-      }
-      headerVideo.play();
-      videoOverlay.style.opacity = '0';
-    };
-
-    const pauseVideo = () => {
-      headerVideo.pause();
-      videoOverlay.style.opacity = '1';
-    };
-
-    const toggleVideo = () => {
-      if (headerVideo.paused) {
-        loadAndPlayVideo();
-      } else {
-        pauseVideo();
-      }
-    };
-
-    if (watchVideoBtn) {
-      watchVideoBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleVideo();
-      });
+  const openVideoPopup = () => {
+    if (!popupVideo.src) {
+      popupVideo.src = headerVideo.dataset.src;
     }
+    videoPopup.style.display = 'flex';
+    popupVideo.play();
+  };
 
-    if (videoOverlay) {
-      videoOverlay.addEventListener('click', (e) => {
-        e.preventDefault();
-        loadAndPlayVideo();
-      });
-    }
+  const closeVideoPopup = () => {
+    videoPopup.style.display = 'none';
+    popupVideo.pause();
+  };
 
-    headerVideo.addEventListener('click', toggleVideo);
-
-    headerVideo.addEventListener('ended', () => {
-      videoOverlay.style.opacity = '1';
-    });
-
-    // Remove poster after video starts playing
-    headerVideo.addEventListener('play', () => {
-      headerVideo.removeAttribute('poster');
+  if (watchVideoBtn) {
+    watchVideoBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openVideoPopup();
     });
   }
+
+  if (videoOverlay) {
+    videoOverlay.addEventListener('click', (e) => {
+      e.preventDefault();
+      openVideoPopup();
+    });
+  }
+
+  if (headerVideo) {
+    headerVideo.addEventListener('click', (e) => {
+      e.preventDefault();
+      openVideoPopup();
+    });
+  }
+
+  videoPopup.addEventListener('click', (e) => {
+    if (e.target !== popupVideo) {
+      closeVideoPopup();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoPopup.style.display === 'flex') {
+      closeVideoPopup();
+    }
+  });
 });
