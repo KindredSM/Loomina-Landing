@@ -636,8 +636,8 @@ footer a {
     padding-right: 0;
 
   }
-  .video-popup-content {
-   max-width: 90%;
+  .video-popup-video {
+   max-width: 100%;
 
   }
 }
