@@ -32,14 +32,16 @@ nav {
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   z-index: 10;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 nav.scrolled {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid #efefef;
   width: 95%;
 }
 
@@ -597,6 +599,9 @@ footer a {
 }
 
 @media (max-width: 768px) {
+  nav {
+    width: 86%;
+  }
   nav.scrolled {
    width: 85%;
   }
