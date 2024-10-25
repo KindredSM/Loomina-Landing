@@ -144,6 +144,7 @@ header {
   position: relative;
   cursor: pointer;
   margin: 25px 0px;
+  transition: all 0.2s ease;
 }
 
 .header-video video {
@@ -167,6 +168,14 @@ header {
   box-shadow: 0px 16px 50px rgba(128, 0, 128, 0.3);
 }
 
+video {
+  transition: all 0.2s ease;
+}
+
+.header-video:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
 
 .feedback-button {
   display: flex;
