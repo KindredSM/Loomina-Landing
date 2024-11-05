@@ -250,8 +250,8 @@ header h1 {
 
 .wizard-hat {
   position: absolute;
-  top: -20px;
-  right: -28px;
+  top: -19px;
+  right: -30px;
 }
 
 .subheader-img {
@@ -541,9 +541,9 @@ footer a {
   }
 
   .wizard-hat {
-    top: -18px;
-    right: -24px;
-    width: 55px;
+    top: -14px;
+    right: -21px;
+    width: 50px;
   }
 
   .card-container:nth-child(2) .card-content {
@@ -753,7 +753,7 @@ footer a {
 
   .wizard-hat {
     top: -11px;
-    right: -15px;
+    right: -14.5px;
     width: 35px;
   }
 
