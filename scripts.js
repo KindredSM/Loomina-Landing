@@ -124,4 +124,31 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.add('scrolled');
     }
   });
+
+  const burgerMenu = document.querySelector('.burger-menu');
+  const navMenu = document.querySelector('.nav-menu');
+  const body = document.body;
+
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !burgerMenu.contains(e.target) && navMenu.classList.contains('active')) {
+      burgerMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+      body.style.overflow = '';
+    }
+  });
+
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      burgerMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+      body.style.overflow = '';
+    });
+  });
 });
