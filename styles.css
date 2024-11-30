@@ -27,7 +27,7 @@ nav {
   font-size: 18px;
   position: fixed;
   width: 96%;
-  border-radius: 16px;
+  border-radius: 100px;
   box-shadow: none;
   top: 16px;
   left: 50%;
@@ -82,6 +82,7 @@ h2 {
 }
 nav .logo {
   width: 120px;
+  margin-left: 12px;
 }
 
 .weave-text {
@@ -96,7 +97,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 16px;
-  margin-right: 32px;
+  margin-right: 12px;
 }
 
 nav ul li a {
@@ -655,11 +656,18 @@ a {
 @media (max-width: 768px) {
   nav {
   height: 60px;
+  margin-top: 16px;
+
+
   }
+
+
+  
 
   nav.scrolled {
     box-shadow: none;
-    width: 100%;
+    width: 90%;
+   
  
   }
  
@@ -990,8 +998,9 @@ html {
 
   nav {
     top: 0;
-    width: 100%;
+    width: 90%;
   }
+
   nav ul.nav-menu {
     position: fixed;
     top: 0;
@@ -1033,6 +1042,43 @@ html {
     width: 100%;
   
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul.nav-menu li a {
+    font-size: 20px;
+    color: #404040;
+  }
+
+  nav ul.nav-menu li:last-child a {
+    color: white;
+  }
+
+  .nav-text {
+    display: block;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul.nav-menu li a i {
+    display: none !important;
+  }
+
+  nav ul.nav-menu li a {
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  nav ul.nav-menu li a span {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-text {
+    display: block;
+    font-weight: 500;
   }
 }
 
