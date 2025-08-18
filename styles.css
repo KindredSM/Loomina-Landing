@@ -121,6 +121,40 @@ nav .logo:hover {
   animation: fadeInUp 0.3s ease-out 0.1s both;
 }
 
+.highlight-10x {
+  position: relative;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.highlight-10x::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  bottom: 10px;
+  width: 104%;
+  height: 4px;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease-in-out infinite;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 .hero .subheader {
   max-width: 760px;
   font-size: clamp(16px, 2.4vw, 22px);
