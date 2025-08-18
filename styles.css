@@ -706,7 +706,7 @@ a {
 
   nav.scrolled {
     box-shadow: none;
-    width: 90%;
+    width: 100%;
   }
 
   .logo {
@@ -1081,7 +1081,7 @@ html {
 
   nav {
     top: 0;
-    width: 90%;
+    width: 100%;
   }
 
   nav ul.nav-menu {
