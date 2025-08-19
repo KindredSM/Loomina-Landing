@@ -734,6 +734,10 @@ a {
     font-size: 14px;
     border-radius: 14px;
   }
+  .highlight-10x::after {
+    bottom: 6px;
+    height: 3px;
+  }
   .hero {
     padding: 40px 14px;
   }
@@ -844,6 +848,10 @@ a {
 }
 
 @media (max-width: 480px) {
+  .highlight-10x::after {
+    bottom: 4px;
+    height: 2px;
+  }
   nav ul {
     margin-top: 1rem;
   }
